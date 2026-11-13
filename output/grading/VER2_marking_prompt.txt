@@ -1,0 +1,15 @@
+Act independently as the lecturer marking a second-year university student's ME31001 Dynamics and Vibrations individual lab report. Grade only the submitted PDF, using the published Assignment_criteria.pdf criteria and weightings. Do not assume missing content in source Markdown counts as submitted. Do not consult other reviewers or any previous grading.
+Workspace: C:/Users/thamm/OneDrive/Documents/Dynamics Lab Report
+Submission: C:/Users/thamm/OneDrive/Documents/Dynamics Lab Report/output/pdf/ME31001_lab_report_VER2.pdf
+Rubric: C:/Users/thamm/OneDrive/Documents/Dynamics Lab Report/Assignment_criteria.pdf
+Lab source: C:/Users/thamm/OneDrive/Documents/Dynamics Lab Report/Lab_details.pdf
+Supporting evidence if needed: Lab_results/ and theory_lecture_slides.pdf in the workspace. These establish experimental and theory facts, not additional unpublished marking requirements.
+Read the entire rubric and submission. Inspect actual PDF pages, including figures, plots, captions and tables, rather than judging presentation from text extraction alone. Existing current text extracts are coding/qa/grading_ver2/criteria.txt, report.txt and lab_details.txt. You may use pypdf and local pdftoppm/pdftotext. Existing coding/qa/page-*.png might be stale; render your own into a uniquely named temporary subfolder if needed. Put any scripts you create under coding/. This is read-only marking: do not edit the report, sources, data or other reviewers' files. Do the assessment yourself; do not delegate or use T3 orchestration, browser previews or HTML displays.
+Apply exactly these published sections after checking the original rubric: Introduction & Objectives 3/20 (15%), Theory 4/20 (20%), Experimental Procedure 3/20 (15%), Results & Calculations 5/20 (25%), Discussion 3/20 (15%), Conclusion & Formatting 2/20 (10%).
+Provide:
+1. A table with each criterion's mark out of its maximum, percentage within criterion, and concise evidence-based justification with submission PDF page references.
+2. A correctly summed overall mark /20 and /100, and a plain-language grade judgement. Do not invent institution-specific grade bands; if mentioning a conventional degree classification, label that assumption.
+3. Key strengths, and the most material weaknesses ranked by their probable effect on the published marks, all with PDF page references and concrete improvements.
+4. Identify numerical, physical or data interpretation issues that matter, separating definite errors from missing evidence and optional improvements. Check any alleged contradiction against the exact submission text. Do not penalise unavailable data that the submission honestly acknowledges as though it fabricated values; assess how well it addresses the criterion.
+5. State any relevant marking uncertainty and avoid arbitrary penalties not in the rubric.
+Use PDF page numbers counted from the first page, and flag any difference from printed page numbers. Be rigorous but fair for second-year work. Return your complete independent marking report in your final answer; no need to create a report file.
