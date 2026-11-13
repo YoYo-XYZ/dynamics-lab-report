@@ -89,7 +89,7 @@ def build(item):
             rf'preaction={{draw=white,line width=1.1bp}}]'
             rf' ({x},{anchor_y}) -- ({px:.3f},{py:.3f});',
             rf'\node[overlay,fill=white,draw=blue!65!black,rounded corners=2bp,'
-            rf'inner sep=3bp,font=\sffamily\fontsize{{9}}{{11}}\selectfont]'
+            rf'inner sep=3bp,font=\sffamily\fontsize{{15}}{{17}}\selectfont]'
             rf' at ({x},{y}) {{{text}}};',
         ])
     if item['name'] not in ['apparatus', 'shaker_settings']:
