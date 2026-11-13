@@ -26,6 +26,7 @@ MAPPING = {
     'oil_decay': ('Experiment 3 step 1', 'oil damper, decay, one numeric export'),
     'oil_sweep': ('Experiment 3 step 2', 'oil damper, swept sine; matches step 3 PNG'),
 }
+DECAY_STARTS = {'bare_decay_1':0, 'bare_decay_2':.46, 'bare_decay_3':0, 'oil_decay':.30}
 
 def load_all():
     records = {}
@@ -146,8 +147,7 @@ def main():
              'oil_sweep': [(35,60),(150,195)]}
     frequency = {key:[peak_in_band(records[key],lo,hi) for lo,hi in ranges]
                  for key,ranges in bands.items()}
-    starts = {'bare_decay_1':0,'bare_decay_2':.46,'bare_decay_3':0,'oil_decay':.30}
-    damping = {key:decay(records[key],start) for key,start in starts.items()}
+    damping = {key:decay(records[key],start) for key,start in DECAY_STARTS.items()}
     L,b,h,E,rho,added = .650,.050,.008,210e9,7850.,1.00
     inertia=b*h**3/12
     stiffness=48*E*inertia/L**3
@@ -165,7 +165,7 @@ def main():
                           for j,r in enumerate(frequency[key])]
     theory['bare_error_percent']=100*abs(frequency['bare_sweep'][0]['frequency_Hz']-f0)/f0
     theory['added_error_percent']=100*abs(frequency['mass_sweep'][0]['frequency_Hz']-f1)/f1
-    zz=[damping[key]['zeta'] for key in starts if key.startswith('bare')]
+    zz=[damping[key]['zeta'] for key in DECAY_STARTS if key.startswith('bare')]
     summary={'bare_zeta_mean':float(np.mean(zz)),'bare_zeta_sample_sd':float(np.std(zz,ddof=1)),
              'oil_to_bare_mean_ratio':float(damping['oil_decay']['zeta']/np.mean(zz))}
     result={'file_mapping':MAPPING,'frequency':frequency,'damping':damping,
