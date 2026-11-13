@@ -152,9 +152,20 @@ Figure 3 shows the peaks for all four frequency tests. Each panel is divided by 
 
 Figures 4 and 5 show the original bare-beam DASP spectra. The table values use exported peaks rather than the software's main-frequency readout [3].
 
+```{=latex}
+\begingroup
+\def\toprule{}
+\def\midrule{}
+\def\bottomrule{}
+```
+
 | ![Figure 4. Bare-beam swept-sine spectrum [3].](figures/lab/bare_sweep.png){width=90%} | ![Figure 5. Bare-beam hammer spectrum [3].](figures/lab/bare_hammer.png){width=90%} |
 |:--:|:--:|
 | Figure 4. Bare sweep. | Figure 5. Bare hammer. |
+
+```{=latex}
+\endgroup
+```
 
 ### 4.2 Added centre mass
 
@@ -177,9 +188,20 @@ The supplied lab-sheet entries were one frequency bin away from the exported max
 
 The original added-mass and oil-damper spectra are shown in Figures 6 and 7 [3]. Figure 7 corresponds to the numerical oil-damper sweep export.
 
+```{=latex}
+\begingroup
+\def\toprule{}
+\def\midrule{}
+\def\bottomrule{}
+```
+
 | ![Figure 6. Added-mass swept-sine spectrum [3].](figures/lab/added_mass.png){width=90%} | ![Figure 7. Oil-damper swept-sine spectrum [3].](figures/lab/oil_sweep.png){width=65%} |
 |:--:|:--:|
 | Figure 6. Added-mass sweep. | Figure 7. Oil-damper sweep. |
+
+```{=latex}
+\endgroup
+```
 
 ### 4.3 Theoretical first frequency
 
@@ -227,9 +249,20 @@ The three bare estimates ranged from 0.01188 to 0.01520, with a mean of 0.01324.
 
 Figures 9 and 10 show the original decay captures. Their time axes and offsets are as captured; Figure 8 shows the peaks used in the calculations [3].
 
+```{=latex}
+\begingroup
+\def\toprule{}
+\def\midrule{}
+\def\bottomrule{}
+```
+
 | ![Figure 9. Bare-beam decay [3].](figures/lab/bare_decay.png){width=90%} | ![Figure 10. Oil-damper decay [3].](figures/lab/oil_decay.png){width=90%} |
 |:--:|:--:|
 | Figure 9. Bare decay. | Figure 10. Oil-damper decay. |
+
+```{=latex}
+\endgroup
+```
 
 ### 4.5 Oil-damper forced response
 
