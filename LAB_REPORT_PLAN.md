@@ -124,6 +124,17 @@ Use the lecture equations already introduced in Section 2 to explain the measure
 
 ## Established data decisions for the rewrite
 
+### Agreed use of lab-session images
+
+- Keep the two calculated graphs and add original lab images as supporting evidence.
+- In Procedure, include the clear apparatus close-up and the controller photograph showing the sweep settings.
+- In Results, include six DASP captures: bare sweep, hammer, added-mass sweep, bare decay, oil-damper decay and oil-damper sweep. Use one representative capture for each, rather than repeated decay screenshots.
+- Keep all selected images in the main report. Allow the space needed for readable images.
+- Crop unused areas and add a few arrows or labels. Preserve the original measurements and image files. Give each figure a caption, source filename and a reference in the text.
+- Retain screenshot display scales and distinguish screen readouts from frequencies selected from the exported data.
+
+### Resolved experimental details
+
 Read `IMPLEMENTATION_CLARIFICATIONS.md` for the full preparation record. Keep these resolved decisions; do not ask again for unavailable lab notes.
 
 - The added mass was used only in Experiment 1, Step 3. Its actual value is unknown; use the instructed assumption of 1.00 kg and identify it clearly when presenting the theoretical prediction.

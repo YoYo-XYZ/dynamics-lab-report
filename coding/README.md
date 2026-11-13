@@ -5,6 +5,7 @@ The revised report source is `../REPORT_VER2.md`. Original measurements stay in 
 Use Python 3 with `python -m pip install -r coding/requirements.txt` from the project root. The PDF build also requires XeLaTeX on PATH, supplied here by MiKTeX. `pypandoc_binary` includes Pandoc. No browser or local server is needed.
 
 1. Run `python coding/analyse_results.py` to validate all eight exports, calculate the results and generate `figures/frequency_spectra.png` and `figures/free_decay.png`.
+   Run `python coding/build_lab_figures.py` to prepare the two labelled session photos and six DASP screenshot extracts in `figures/lab/`. This uses XeLaTeX to place the original images in clipped document viewports with vector callouts, then Poppler to render the Markdown figure assets. Source captures are unchanged. The source-to-figure mapping and crop bounds are in the script.
 2. Run `python coding/build_report.py --source REPORT_VER2.md --output output/pdf/ME31001_lab_report_VER2.pdf` to generate the revised PDF directly from the Markdown source.
 3. Run `python coding/verify_report.py --source REPORT_VER2.md --pdf output/pdf/ME31001_lab_report_VER2.pdf` for numerical and document checks and PDF-page images in `coding/qa/`. Inspect those images for layout and equation rendering.
 

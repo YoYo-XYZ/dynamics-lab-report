@@ -23,6 +23,9 @@ function Pandoc(doc)
     space = { ["1"] = 90, ["2"] = 100, ["3"] = 95, ["4"] = 115, ["5"] = 100 }
     local legacy_heading = keep_heading
     keep_heading = function(block)
+      if pandoc.utils.stringify(block) == '5. Discussion' then
+        return { pandoc.RawBlock('latex', '\\Needspace{180pt}'), block }
+      end
       if pandoc.utils.stringify(block) == 'References' then
         return { pandoc.RawBlock('latex', '\\Needspace{140pt}'), block }
       end

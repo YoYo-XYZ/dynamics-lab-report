@@ -19,8 +19,17 @@ def main():
     report = (ROOT/args.source).read_text(encoding='utf-8')
     for section in range(1,7):
         assert re.search(rf'^## {section}\. ', report, re.M), section
-    for image in re.findall(r'!\[[^\]]*\]\(([^)]+)\)', report):
+    images = re.findall(r'^!\[.*\]\(([^)]+)\)', report, re.M)
+    assert len(images) >= 2
+    for image in images:
         assert (ROOT/image).is_file(), image
+    figures = re.findall(r'^!\[Figure (\d+)\.', report, re.M)
+    assert figures == [str(i) for i in range(1,len(figures)+1)]
+    for number in re.findall(r'\bFigure (\d+)\b', report):
+        assert number in figures
+    if (ROOT/args.source).name == 'REPORT_VER2.md':
+        assert len(figures) == 10
+        assert len([image for image in images if image.startswith('figures/lab/')]) == 8
     references = re.findall(r'^\[(\d+)\] ', report, re.M)
     assert references == [str(i) for i in range(1,len(references)+1)]
     assert len(references) >= 3
@@ -52,6 +61,8 @@ def main():
     pdf=ROOT/args.pdf
     reader=PdfReader(pdf)
     text='\n'.join(page.extract_text() for page in reader.pages)
+    for number in figures:
+        assert re.search(rf'Figure {number}\.\s', text), number
     assert len(reader.pages)>=6
     assert all(len(page.extract_text().strip())>40 for page in reader.pages)
     assert 'Conclusion' in text and 'References' in text
