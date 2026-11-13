@@ -1,3 +1,8 @@
+---
+header-includes:
+  - \setlength{\parskip}{3pt}
+---
+
 # Vibration of a simply supported beam
 
 ME31001 Dynamics and Vibrations | Individual laboratory report
@@ -12,12 +17,7 @@ This lab used a shaker and a hammer to find the beam's frequencies. The shaker s
 
 The vibration after an impact gradually died away. Logarithmic decrement uses the decrease between successive peaks to estimate damping [2, PDF p. 28]. Repeating the test with an oil damper allowed the decay and forced response to be compared.
 
-The four objectives were to:
-
-1. Find the first three beam frequencies using swept-sine and hammer tests, and compare the methods.
-2. Measure how an added centre mass changed the first two frequencies.
-3. Calculate the bare-beam damping ratio from its free decay.
-4. Investigate how an oil damper changed the decay and forced response.
+The objectives were to compare the first three frequencies from swept-sine and hammer tests, measure the effect of a centre mass on the first two frequencies, calculate the bare-beam damping ratio, and investigate the oil damper’s effect on decay and forced response.
 
 ## 2. Theory
 
@@ -90,7 +90,7 @@ m_0=\rho Lbh,\qquad
 m=\frac{17}{35}m_0. \tag{7}
 $$
 
-The span $L$, width $b$ and thickness $h$ are in m. The second moment of area $I$ is in m$^4$, $E$ is Young's modulus in Pa, and $\rho$ is density in kg/m$^3$. The total beam mass is $m_0$; $m$ is the equivalent mass used in Equation 1.
+Here $L$, $b$ and $h$ are the span, width and thickness; $I$ is the second moment of area, $E$ is Young's modulus and $\rho$ is density. The beam mass is $m_0$ and its equivalent mass is $m$.
 
 An added centre mass $m'$ moves with the beam centre. The first-frequency prediction becomes [1, p. 7]:
 
@@ -112,7 +112,7 @@ The INV1601 system included a simply supported beam, signal generator, shaker, a
 
 Figure 1 identifies the main parts in a photograph from the lab session. The oil damper is shown fitted for the damping test.
 
-![Figure 1. Lab apparatus, including the beam, accelerometer, support, hammer, oil damper and shaker. Labels have been added to the session photograph, experiment_setup_closeup.png [3].](figures/lab/apparatus.png)
+![Figure 1. Lab apparatus, including the beam, accelerometer, support, hammer, oil damper and shaker. Labels have been added to the session photograph, experiment_setup_closeup.png [3].](figures/lab/apparatus.png){width=45%}
 
 ### 3.2 Frequency tests
 
@@ -120,7 +120,7 @@ Single-channel acquisition was used. The lab settings specified ICP input, the s
 
 The controller photograph in Figure 2 shows the sweep range, time and current settings.
 
-![Figure 2. Controller settings photographed during the lab: 10-400 Hz sweep, 60 s sweep time and 0.500 A RMS current. Cropped from experiment_shaker_config.png, with labels added [3].](figures/lab/shaker_settings.png)
+![Figure 2. Controller settings photographed during the lab: 10-400 Hz sweep, 60 s sweep time and 0.500 A RMS current. Cropped from experiment_shaker_config.png, with labels added [3].](figures/lab/shaker_settings.png){width=35%}
 
 The shaker was switched off before hammer testing. Repeated impacts were recorded using Linear Average to obtain a stable spectrum. A 1.00 kg mass was then attached at the beam centre and the sweep was repeated for the first two frequencies [1, pp. 3-4]. It was removed before the decay and oil-damper tests.
 
@@ -148,13 +148,13 @@ Table 1. Bare-beam frequencies from swept-sine and hammer tests [3].
 
 Figure 3 shows the peaks for all four frequency tests. Each panel is divided by its own maximum to compare peak positions.
 
-![Figure 3. Response spectra for the bare sweep, bare hammer, added-mass sweep and oil-damper sweep. Each panel is normalised separately, so heights do not compare absolute responses. Markers show the frequencies used in the tables. The oil-damper data cover 10-200 Hz [3].](figures/frequency_spectra.png)
+![Figure 3. Response spectra for the bare sweep, bare hammer, added-mass sweep and oil-damper sweep. Each panel is normalised separately, so heights do not compare absolute responses. Markers show the frequencies used in the tables. The oil-damper data cover 10-200 Hz [3].](figures/frequency_spectra.png){width=55%}
 
-Figures 4 and 5 show the original DASP spectra for the two bare-beam methods. These extracts keep the original dB displays and screen markers. The table values were taken from the exported spectra, rather than the software's main-frequency readout.
+Figures 4 and 5 show the original bare-beam DASP spectra. The table values use exported peaks rather than the software's main-frequency readout [3].
 
-![Figure 4. Bare-beam swept-sine spectrum from Experiment 1 step 1.png. The view is cropped to the first three peaks, with arrows added to identify them [3].](figures/lab/bare_sweep.png)
-
-![Figure 5. Bare-beam hammer spectrum from Experiment 1 step 2.png. The same three peak regions appear after hammer excitation. The original spectrum scale is retained [3].](figures/lab/bare_hammer.png)
+| ![Figure 4. Bare-beam swept-sine spectrum [3].](figures/lab/bare_sweep.png){width=90%} | ![Figure 5. Bare-beam hammer spectrum [3].](figures/lab/bare_hammer.png){width=90%} |
+|:--:|:--:|
+| Figure 4. Bare sweep. | Figure 5. Bare hammer. |
 
 ### 4.2 Added centre mass
 
@@ -175,47 +175,22 @@ $$
 
 The supplied lab-sheet entries were one frequency bin away from the exported maxima for the bare second and added-mass first peaks. The saved export maxima were used consistently here.
 
-Figure 6 shows the two peak regions used for the added-mass comparison.
+The original added-mass and oil-damper spectra are shown in Figures 6 and 7 [3]. Figure 7 corresponds to the numerical oil-damper sweep export.
 
-![Figure 6. Added-mass swept-sine spectrum from Experiment 1 step 3.png. Arrows identify the first two peaks. Other visible peaks were outside the required comparison [3].](figures/lab/added_mass.png)
+| ![Figure 6. Added-mass swept-sine spectrum [3].](figures/lab/added_mass.png){width=90%} | ![Figure 7. Oil-damper swept-sine spectrum [3].](figures/lab/oil_sweep.png){width=65%} |
+|:--:|:--:|
+| Figure 6. Added-mass sweep. | Figure 7. Oil-damper sweep. |
 
 ### 4.3 Theoretical first frequency
 
-Using the supplied dimensions in Equation 7 gives the beam stiffness and equivalent mass [1, pp. 1, 7]:
+Using Equation 7 and the supplied dimensions [1, pp. 1, 7] gives $I=2.1333\times10^{-9}$ m$^4$, $k=7.8303\times10^4$ N/m, $m_0=2.041$ kg and $m=0.99134$ kg. Equation 8 then gives
 
 $$
-\begin{aligned}
-I&=\frac{0.050(0.008)^3}{12}
-  =2.1333\times10^{-9}\ \mathrm{m^4},\\
-k&=\frac{48(210\times10^9)(2.1333\times10^{-9})}{(0.650)^3}
-  =7.8303\times10^4\ \mathrm{N/m},\\
-m_0&=7850(0.650)(0.050)(0.008)=2.041\ \mathrm{kg},\\
-m&=\frac{17}{35}(2.041)=0.99134\ \mathrm{kg}.
-\end{aligned}
+f_{\mathrm{bare}}=\frac{1}{2\pi}\sqrt{\frac{78303}{0.99134}}=44.73\ \mathrm{Hz},\quad
+f_{\mathrm{added}}=\frac{1}{2\pi}\sqrt{\frac{78303}{0.99134+1.00}}=31.56\ \mathrm{Hz}.
 $$
 
-With no added mass, Equation 8 gives
-
-$$
-f_{\mathrm{bare}}=\frac{1}{2\pi}\sqrt{\frac{78303}{0.99134}}
-=44.73\ \mathrm{Hz}.
-$$
-
-Using the added mass of 1.00 kg gives
-
-$$
-f_{\mathrm{added}}=\frac{1}{2\pi}\sqrt{\frac{78303}{0.99134+1.00}}
-=31.56\ \mathrm{Hz}.
-$$
-
-Table 3 compares these predictions with the sweep results. The percentage difference uses the theoretical frequency as the denominator:
-
-$$
-\text{Difference}=
-\frac{|f_{\mathrm{measured}}-f_{\mathrm{theory}}|}{f_{\mathrm{theory}}}\times100.
-$$
-
-For the bare beam, this is $100(46.875-44.7299)/44.7299=4.80\%$.
+Table 3 compares the predictions with the sweep results. Percentage difference is $100|f_{\mathrm{measured}}-f_{\mathrm{theory}}|/f_{\mathrm{theory}}$; for the bare beam it is 4.80%.
 
 Table 3. Theoretical and measured first frequencies.
 
@@ -226,24 +201,14 @@ Table 3. Theoretical and measured first frequencies.
 
 ### 4.4 Free decay and damping ratio
 
-Figure 7 shows one bare decay and the oil-damper decay. For each record, the equilibrium baseline was estimated from the mean response over $0.85<t<1.02$ s. Eleven positive peaks spanning ten cycles were selected after the early part of the decay. A constant conversion factor cancels in the peak ratio, so the exported mV amplitudes were used.
+Figure 8 shows one bare decay and the oil-damper decay. For each record, the equilibrium baseline was estimated from the mean response over $0.85<t<1.02$ s. Eleven positive peaks spanning ten cycles were selected after the early part of the decay. A constant conversion factor cancels in the peak ratio, so the exported mV amplitudes were used.
 
-![Figure 7. Free decay for bare repeat 3 and the oil damper, in exported units. Time is measured from each record's selected peak 1. Circles mark eleven same-side peaks, and dashed lines show the equilibrium baselines. Peak amplitudes were measured above these lines [3].](figures/free_decay.png)
+![Figure 8. Free decay for bare repeat 3 and the oil damper, in exported units. Time is measured from each record's selected peak 1. Circles mark eleven same-side peaks, and dashed lines show the equilibrium baselines. Peak amplitudes were measured above these lines [3].](figures/free_decay.png){width=55%}
 
-For bare repeat 3, subtracting the baseline of $-0.000258959$ mV from the recorded peaks gives
-
-$$
-\begin{aligned}
-a_1&=0.001030-(-0.000258959)=0.001288959\ \mathrm{mV},\\
-a_{11}&=0.000352-(-0.000258959)=0.000610959\ \mathrm{mV}.
-\end{aligned}
-$$
-
-These peaks are ten cycles apart. Using Equation 6 gives
+For bare repeat 3, subtracting the baseline of $-0.000258959$ mV gives $a_1=0.001288959$ mV and $a_{11}=0.000610959$ mV. These peaks are ten cycles apart, so Equation 6 gives
 
 $$
-\delta=\frac{1}{10}\ln\left(\frac{0.001288959}{0.000610959}\right)
-=0.07466,\qquad
+\delta=\frac{1}{10}\ln\left(\frac{0.001288959}{0.000610959}\right)=0.07466,\qquad
 \zeta\approx\frac{0.07466}{2\pi}=0.01188.
 $$
 
@@ -260,11 +225,11 @@ Table 4. Logarithmic decrement and damping ratio over ten cycles [3].
 
 The three bare estimates ranged from 0.01188 to 0.01520, with a mean of 0.01324. The oil-damper estimate was 0.02882, about 2.18 times the bare mean.
 
-Figures 8 and 9 show the original decay captures for these conditions. Their time axes and display offsets are kept as captured; Figure 7 shows the peaks and baselines used in the calculation.
+Figures 9 and 10 show the original decay captures. Their time axes and offsets are as captured; Figure 8 shows the peaks used in the calculations [3].
 
-![Figure 8. Bare-beam decay from Experiment 2 step 3.png. The waveform extract shows the decrease in oscillation amplitude after hammer excitation. Labels identify the early and later parts of the decay [3].](figures/lab/bare_decay.png)
-
-![Figure 9. Oil-damper decay from Experiment 3 step 1.png. The waveform extract includes the hammer impact and the following decay [3].](figures/lab/oil_decay.png)
+| ![Figure 9. Bare-beam decay [3].](figures/lab/bare_decay.png){width=90%} | ![Figure 10. Oil-damper decay [3].](figures/lab/oil_decay.png){width=90%} |
+|:--:|:--:|
+| Figure 9. Bare decay. | Figure 10. Oil-damper decay. |
 
 ### 4.5 Oil-damper forced response
 
@@ -279,56 +244,21 @@ Table 5. Forced-response peak frequencies with the oil damper [3].
 
 The third bare frequency was outside the 10-200 Hz oil-damper sweep range.
 
-The original oil-damper spectrum is shown in Figure 10, cropped around the measured frequency range.
-
-![Figure 10. Oil-damper swept-sine spectrum from Experiment 3 step 3.png. Arrows identify the first two peaks. This screen corresponds to the numerical export Experiment 3 step 2.txt [3].](figures/lab/oil_sweep.png){width=75%}
-
 ## 5. Discussion
 
-### 5.1 Added mass and the theoretical prediction
+### 5.1 Added mass and theoretical prediction
 
-Adding mass lowers the natural frequency if stiffness stays the same. Taking the ratio from Equation 8 gives [1, p. 7; 2, PDF p. 9]:
-
-$$
-\frac{f_{\mathrm{added}}}{f_{\mathrm{bare}}}
-=\sqrt{\frac{m}{m+m'}}<1,\qquad m'>0.
-$$
-
-The first measured frequency fell from 46.88 to 33.20 Hz, a 29.17% reduction. The model predicted a 29.44% reduction for the 1.00 kg mass, so the measured trend agrees with the mass-spring relationship.
-
-The second frequency fell by only 5.75%. The two modes were therefore affected by different amounts. Equation 8 represents the first mode only and cannot predict the second-mode change.
-
-Both measured first frequencies were about 5% above the predictions. The real supports may differ from the ideal simple supports assumed by the model. Checking the support conditions would make the comparison more reliable.
+Equation 8 predicts that adding mass lowers the first frequency if stiffness is unchanged [1, p. 7; 2, PDF p. 9]. The measured reduction was 29.17%, close to the predicted 29.44%. The second frequency fell by only 5.75%; the first-mode model cannot predict this change. Both measured first frequencies were about 5% above the predictions, possibly because the supports differed from the ideal simple supports. Checking the supports would improve the comparison.
 
 ### 5.2 Swept-sine and hammer tests
 
-Both methods found the same three frequency bins in Table 1. This supports the peak selections, although the 0.98 Hz spacing limits the comparison.
+Both methods found the same three frequency bins, within the 0.98 Hz spacing. The sweep made resonance easy to follow, but took longer and depended on allowing the response to build up. Hammer testing was quick and excited several frequencies, but depended on the strike position and impact. Linear Average helped stabilise the spectrum [1, pp. 2-3]. Consistent strikes and longer records would improve repeatability and frequency resolution.
 
-The sweep made resonance easy to follow as the frequency changed, and Peakhold retained the peaks. It took longer than a hammer impact and depended on the sweep allowing the response to build up. Hammer testing was quick and excited several frequencies, but the result depended on the impact position and strike. Repeated impacts with Linear Average helped obtain a stable spectrum [1, pp. 2-3]. Keeping the strike position consistent and recording for longer would improve repeatability and frequency resolution.
+### 5.3 Oil damper and limitations
 
-### 5.3 Oil damper and decay
+The oil-damper damping ratio was 0.02882, compared with the bare mean of 0.01324. This agrees with its faster decay in Figure 8 and the envelope in Equation 5 [2, PDF pp. 25-28]. Both responses remained underdamped. At resonance Equation 4 gives $M=1/(2\zeta)$, so greater damping predicts a lower displacement peak for the same force and stiffness [2, PDF p. 34]. The saved tests did not establish equal force or matching calibration, so peak heights cannot confirm this.
 
-The oil-damper response lost amplitude faster relative to its starting peak. In Equation 5, the decay envelope is [2, PDF pp. 25-28]:
-
-$$
-A(t)=A e^{-\zeta\omega_n t}.
-$$
-
-The larger damping ratio, 0.02882 compared with the bare mean of 0.01324, agrees with the faster decay in Figure 7. Both values are well below 1, so both responses remained underdamped.
-
-The lecture magnification factor also predicts a smaller displacement response near resonance. At $r=1$, Equation 4 reduces to [2, PDF p. 34]:
-
-$$
-M=\frac{1}{2\zeta}.
-$$
-
-For the same force and stiffness, increasing $\zeta$ therefore lowers the response near resonance. The saved tests did not establish equal input force and matching response calibration, so their absolute peak heights cannot reliably confirm this effect.
-
-With the oil damper, the first forced-response peak fell by 1.95 Hz. The second increased by 0.98 Hz, about one frequency bin. These changes were small compared with the added-mass effect, and the frequency shifts alone do not measure the increase in damping.
-
-### 5.4 Main limitations
-
-The decay records contain some ripple and baseline drift, which affect the peak ratios in Equation 6. Using ten cycles reduces reliance on one adjacent peak pair, but the damping values remain estimates. Only one numerical oil-damper decay was available. Saving several clear decays for both conditions would allow a fairer repeat comparison.
+The oil damper shifted the first peak down by 1.95 Hz and the second up by one frequency bin. These shifts alone do not measure damping. Ripple and baseline drift affect the decay peak ratios, and only one numerical oil-damper decay was available. More repeated decays would improve the comparison.
 
 ## 6. Conclusion
 

@@ -19,11 +19,11 @@ def main():
     report = (ROOT/args.source).read_text(encoding='utf-8')
     for section in range(1,7):
         assert re.search(rf'^## {section}\. ', report, re.M), section
-    images = re.findall(r'^!\[.*\]\(([^)]+)\)', report, re.M)
+    images = re.findall(r'!\[[^\n]*?\]\(([^)]+)\)', report)
     assert len(images) >= 2
     for image in images:
         assert (ROOT/image).is_file(), image
-    figures = re.findall(r'^!\[Figure (\d+)\.', report, re.M)
+    figures = re.findall(r'!\[Figure (\d+)\.', report)
     assert figures == [str(i) for i in range(1,len(figures)+1)]
     for number in re.findall(r'\bFigure (\d+)\b', report):
         assert number in figures
