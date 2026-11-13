@@ -1,4 +1,5 @@
 """Check report values against source data and render every final PDF page for QA."""
+import argparse
 import json
 from pathlib import Path
 import re
@@ -10,14 +11,19 @@ from pypdf import PdfReader
 from inspect_data import ROOT, load_export
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--source', type=Path, default=Path('REPORT_VER1.md'))
+    parser.add_argument('--pdf', type=Path, default=Path('output/pdf/ME31001_lab_report.pdf'))
+    args = parser.parse_args()
     result = json.loads((ROOT/'coding/results/analysis.json').read_text())
-    report = (ROOT/'REPORT_VER1.md').read_text(encoding='utf-8')
+    report = (ROOT/args.source).read_text(encoding='utf-8')
     for section in range(1,7):
         assert re.search(rf'^## {section}\. ', report, re.M), section
     for image in re.findall(r'!\[[^\]]*\]\(([^)]+)\)', report):
         assert (ROOT/image).is_file(), image
-    for reference in range(1,5):
-        assert re.search(rf'^\[{reference}\] ',report,re.M)
+    references = re.findall(r'^\[(\d+)\] ', report, re.M)
+    assert references == [str(i) for i in range(1,len(references)+1)]
+    assert len(references) >= 3
     for key in ['bare_sweep','bare_hammer','mass_sweep','oil_sweep']:
         data=load_export(ROOT/'Lab_results'/(result['file_mapping'][key][0]+'.txt'))
         for p in result['frequency'][key]:
@@ -36,18 +42,20 @@ def main():
         delta=np.log(ratio)/10
         np.testing.assert_allclose(delta,d['delta'],rtol=1e-12)
         np.testing.assert_allclose(d['zeta'],1/np.sqrt(1+(2*np.pi/delta)**2),rtol=1e-12)
-        assert f"{d['zeta']:.5f}" in report
+        approximate = delta/(2*np.pi)
+        np.testing.assert_allclose(approximate,d['zeta_approx'],rtol=1e-12)
+        assert f"{approximate:.5f}" in report
     assert result['file_mapping']['oil_sweep'][0]=='Experiment 3 step 2'
     assert '1.00 kg' in report and 'assumed' in report
     assert 'PDF p. 28' in report and 'PDF p. 34' in report
 
-    pdf=ROOT/'output/pdf/ME31001_lab_report.pdf'
+    pdf=ROOT/args.pdf
     reader=PdfReader(pdf)
     text='\n'.join(page.extract_text() for page in reader.pages)
     assert len(reader.pages)>=6
     assert all(len(page.extract_text().strip())>40 for page in reader.pages)
-    assert 'Appendix A' in text and 'Conclusion' in text and 'References' in text
-    assert text.count('46.88')>=4 and '33.20' in text and '0.02881' in text
+    assert 'Conclusion' in text and 'References' in text
+    assert text.count('46.88')>=4 and '33.20' in text and '0.02882' in text
     assert not any(word in report for word in ['TODO','TBD','[insert','PLACEHOLDER'])
     assert not any(char in text for char in ['\ufffd','\u25a0'])
     qa=ROOT/'coding/qa'

@@ -1,12 +1,14 @@
 # Report calculations and PDF build
 
-The report source is `../REPORT_VER1.md`. Original measurements stay in `../Lab_results/`.
+The revised report source is `../REPORT_VER2.md`. Original measurements stay in `../Lab_results/`.
 
 Use Python 3 with `python -m pip install -r coding/requirements.txt` from the project root. The PDF build also requires XeLaTeX on PATH, supplied here by MiKTeX. `pypandoc_binary` includes Pandoc. No browser or local server is needed.
 
 1. Run `python coding/analyse_results.py` to validate all eight exports, calculate the results and generate `figures/frequency_spectra.png` and `figures/free_decay.png`.
-2. Run `python coding/build_report.py` to generate `output/pdf/ME31001_lab_report.pdf` directly from the Markdown source.
-3. Run `python coding/verify_report.py` for numerical and document checks and PDF-page images in `coding/qa/`. Inspect those images for layout and equation rendering.
+2. Run `python coding/build_report.py --source REPORT_VER2.md --output output/pdf/ME31001_lab_report_VER2.pdf` to generate the revised PDF directly from the Markdown source.
+3. Run `python coding/verify_report.py --source REPORT_VER2.md --pdf output/pdf/ME31001_lab_report_VER2.pdf` for numerical and document checks and PDF-page images in `coding/qa/`. Inspect those images for layout and equation rendering.
+
+Without arguments, the build and verification scripts still use `REPORT_VER1.md` and its original PDF path. The revised report uses the small-damping approximation from the assignment, including an oil-damper estimate of 0.02882. It omits the optional analyses below.
 
 The analysis writes its full results to `coding/results/analysis.json` and the eleven selected maxima per decay to `coding/results/selected_peaks.csv`. Source files are read only. Frequency estimates use saved spectrum maxima, not FFTs of instantaneous sweep waveform blocks. The file named `Experiment 3 step 2.txt` is the oil-damper sweep and matches the step-3 screenshot.
 

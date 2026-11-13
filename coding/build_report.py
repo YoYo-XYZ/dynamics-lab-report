@@ -1,22 +1,28 @@
-"""Build the submission PDF directly from REPORT_VER1.md with Pandoc/XeLaTeX."""
+"""Build a report PDF from its Markdown source with Pandoc/XeLaTeX."""
+import argparse
 from pathlib import Path
 import shutil
 import pypandoc
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'output' / 'pdf'
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--source', type=Path, default=Path('REPORT_VER1.md'))
+    parser.add_argument('--output', type=Path, default=Path('output/pdf/ME31001_lab_report.pdf'))
+    args = parser.parse_args()
+    source = ROOT / args.source
+    output = ROOT / args.output
     if not shutil.which('xelatex'):
         raise RuntimeError('XeLaTeX is required on PATH; install MiKTeX or TeX Live.')
     for name in ['frequency_spectra.png', 'free_decay.png']:
         if not (ROOT/'figures'/name).is_file():
             raise FileNotFoundError('Run python coding/analyse_results.py first.')
-    OUT.mkdir(parents=True,exist_ok=True)
+    output.parent.mkdir(parents=True,exist_ok=True)
     pypandoc.convert_file(
-        str(ROOT/'REPORT_VER1.md'), 'pdf',
+        str(source), 'pdf',
         format='markdown+tex_math_dollars+pipe_tables+implicit_figures',
-        outputfile=str(OUT/'ME31001_lab_report.pdf'),
+        outputfile=str(output),
         extra_args=[
             '--standalone', '--pdf-engine=xelatex',
             '--resource-path='+str(ROOT),
@@ -28,8 +34,9 @@ def main():
             '-V','monofont=Consolas','-V','linestretch=1.08',
             '-V','colorlinks=true','-V','linkcolor=black','-V','urlcolor=blue',
             '-M','lang=en-GB', '-M','pagetitle=ME31001 beam vibration laboratory report',
+            '-M','report-source='+source.name,
         ])
-    print(OUT/'ME31001_lab_report.pdf')
+    print(output)
 
 if __name__ == '__main__':
     main()
