@@ -2,9 +2,11 @@
 
 Model: gpt-6.1-terra. Reasoning: high. Identical marking prompt supplied to all three reviewers.
 
+Mass clarification, 13 November 2026: the user confirmed the actual added mass as 1.00 kg. Mass-related comments below have been corrected to reflect this; the original marks are retained and have not been reassessed.
+
 ## Independent marking report
 
-**Overall mark: 18.5/20, or 92.5/100.** This is an excellent second-year report: it addresses every published section, presents traceable calculations, and is appropriately cautious about limitations in the data. The main limits on the mark are the assumed added mass, uncertainty in the damping estimates, and opportunities for deeper interpretation of the second mode.
+**Overall mark: 18.5/20, or 92.5/100.** This is an excellent second-year report: it addresses every published section, presents traceable calculations, and is appropriately cautious about limitations in the data. The added mass is now confirmed; the remaining limitations are uncertainty in the damping estimates and opportunities for deeper interpretation of the second mode.
 
 The references below use PDF page numbers counted from the first page. They match the report’s printed page numbers.
 
@@ -13,7 +15,7 @@ The references below use PDF page numbers counted from the first page. They matc
 | Introduction & Objectives | **3.0/3** | **100%** | Gives relevant background on resonance, impulse testing and logarithmic decrement, and clearly states all four objectives in the student’s own words (p. 1). |
 | Theory | **3.8/4** | **95%** | Gives the forced-vibration equation, magnification factor, damped response, decrement relation, beam model and distinction between test methods (pp. 1–3). The connection between mode shape and a centre-mounted mass could be developed further. |
 | Experimental Procedure | **2.9/3** | **96.7%** | Describes the apparatus, sweep and hammer methods, decay acquisition and oil-damper repeat, with settings and practical precautions (pp. 3–4). It usefully distinguishes the saved 2,048-point records from the prescribed 2,000 points. |
-| Results & Calculations | **4.3/5** | **86%** | Provides the requested frequency comparisons, theoretical calculation, damping estimates, spectra and decay plots (pp. 5–11). The added-mass theoretical comparison depends on an unmeasured assumed mass, and the damping calculation would be stronger with evidence of sensitivity to baseline and peak selection. Some original screen captures have less clear axis or unit information than the reconstructed plots (pp. 6–8, 10–11). |
+| Results & Calculations | **4.3/5** | **86%** | Provides the requested frequency comparisons, theoretical calculation, damping estimates, spectra and decay plots (pp. 5–11). The added-mass value is now confirmed as 1.00 kg. The damping calculation would be stronger with evidence of sensitivity to baseline and peak selection. Some original screen captures have less clear axis or unit information than the reconstructed plots (pp. 6–8, 10–11). |
 | Discussion | **2.6/3** | **86.7%** | Explains the first-mode mass effect, compares the methods, discusses faster decay and the expected peak-amplitude effect, and identifies errors and improvements (pp. 12–13). It stops short of explaining the much smaller second-mode shift in terms of mode shape and does not quantify the sensitivity of the damping estimates. |
 | Conclusion & Formatting | **1.9/2** | **95%** | Concisely addresses the four objectives and reports the main limitations (p. 13). The PDF is well organised, with numbered, captioned figures and tables; some original plots are small and their axes are less readily readable (pp. 6–8, 10–11). |
 | **Total** | **18.5/20** | **92.5%** | |
@@ -27,7 +29,7 @@ The references below use PDF page numbers counted from the first page. They matc
 
 ## Most material weaknesses and improvements
 
-1. **The added-mass prediction is conditional on an unknown mass** (pp. 4, 8–9, 12). The report labels the 1.00 kg value as an assumption, but the closeness of the predicted and measured reductions cannot strongly validate the model without the actual mass. Record and use the mass if it can be recovered; otherwise present the prediction explicitly as an illustration or show how it varies with assumed mass.
+1. **Resolved: added mass confirmed as 1.00 kg** (pp. 4, 8–9, 12). The theoretical comparison now uses the actual mass. The 31.56 Hz prediction and 5.21% difference from measurement are unchanged.
 
 2. **The damping estimates depend on the chosen baseline and peaks** (pp. 9–10, 13). The report recognises drift and ripple, but does not show how much the result changes with a different reasonable baseline or peak window. Recalculate using alternative windows or fit an exponential envelope, and report the spread. More numerical oil-damper repeats would also make the comparison more reliable.
 
@@ -41,7 +43,7 @@ The references below use PDF page numbers counted from the first page. They matc
 
 **Missing evidence or limitations.**
 
-- The 1.00 kg added mass is explicitly identified as assumed, not measured (pp. 4, 8). The resulting 31.56 Hz prediction and 5.21% difference are therefore conditional, rather than a verified prediction for the actual attachment.
+- The added mass is now confirmed as 1.00 kg (pp. 4, 8). The resulting 31.56 Hz prediction and 5.21% difference now use the actual attachment mass.
 - The decrement calculation assumes the exported signal is suitable for a same-mode peak ratio. A constant scale factor cancels, as the report says, but baseline drift and mixed-mode content can still affect the estimate (pp. 2, 9, 13). The numerical damping ratios should be treated as estimates.
 - The oil-damper second peak rises by approximately one frequency bin (p. 11). That is weak evidence of a physical frequency increase, and the discussion appropriately treats it as small and does not use the shift alone to infer damping (p. 13).
 - The report states that equal input force and matching response calibration were not established, so it cannot confirm the peak-height effect from those tests (p. 12). This is a sound qualification, not a contradiction of its theoretical prediction.

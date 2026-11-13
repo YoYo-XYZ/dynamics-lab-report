@@ -107,7 +107,7 @@ Use the lecture equations already introduced in Section 2 to explain the measure
 - Interpret the frequency reduction with added mass using Equation 7's mass relationship or the corresponding equation number in the rewritten report. A short frequency-ratio statement may replace a long verbal explanation. Compare the first and second measured changes, but state that the first-mode model does not explain every mode. Do not add mode-shape mathematics to explain the second result.
 - Compare swept-sine and hammer estimates using the results table. Discuss advantages and limits, including excitation, averaging, peak identification and resolution where relevant.
 - Compare bare and oil-damper decay rates and damping ratios using the exponential decay term from the lecture. Use the lecture magnification factor to explain the expected effect of damping under equal force. Discuss the measured forced-response peaks briefly and state once why absolute peak amplitudes cannot be compared reliably here.
-- Compare the first-mode theoretical and measured frequencies using the calculated differences. Choose only one or two relevant explanations, such as the ideal support assumption or uncertain added mass. Do not list every possible error.
+- Compare the first-mode theoretical and measured frequencies using the calculated differences. Choose only one or two relevant explanations, such as the ideal support assumption. Do not list every possible error.
 - Keep limitations and improvements to a short paragraph focused on what affects the conclusions. Do not repeat missing-setting and calibration caveats in every section.
 
 **Sources:** `Lab_results` for observations and the equations explained from `theory_lecture_slides.pdf` in Section 2, supported by `Lab_details.pdf`. Include exact lecture PDF pages alongside the relevant interpretation.
@@ -137,7 +137,7 @@ Use the lecture equations already introduced in Section 2 to explain the measure
 
 Read `IMPLEMENTATION_CLARIFICATIONS.md` for the full preparation record. Keep these resolved decisions; do not ask again for unavailable lab notes.
 
-- The added mass was used only in Experiment 1, Step 3. Its actual value is unknown; use the instructed assumption of 1.00 kg and identify it clearly when presenting the theoretical prediction.
+- The added mass was used only in Experiment 1, Step 3. Its actual value was confirmed by the user as 1.00 kg; use this value when presenting the theoretical prediction.
 - Each TXT export contains a waveform block and a saved spectrum block. Use the saved spectra for frequency results. Sampling is 2000 Hz, with 2048 waveform samples and spectrum spacing of about 0.98 Hz.
 - `Experiment 3 step 2.txt` is the oil-damper sweep and matches `Experiment 3 step 3.png`. The second oil-damper decay is available only as `Experiment 3 step 2.png`; do not count the sweep TXT as a decay repeat.
 - Three numerical bare decays and one numerical oil-damper decay are available. The missing oil repeat limits repeat comparison, but does not prevent the main damping calculation.

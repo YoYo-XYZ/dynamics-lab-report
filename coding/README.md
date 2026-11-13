@@ -13,6 +13,6 @@ Without arguments, the build and verification scripts still use `REPORT_VER1.md`
 
 The analysis writes its full results to `coding/results/analysis.json` and the eleven selected maxima per decay to `coding/results/selected_peaks.csv`. Source files are read only. Frequency estimates use saved spectrum maxima, not FFTs of instantaneous sweep waveform blocks. The file named `Experiment 3 step 2.txt` is the oil-damper sweep and matches the step-3 screenshot.
 
-The added mass is an instructed assumption of 1.00 kg. Decay units remain exported mV. A constant baseline is the waveform mean over 0.85 < t < 1.02 s. Each primary damping estimate uses ten cycles between same-side maxima after the initial impact region. The output also records sensitivity to six/eight-cycle endpoints and to a local linear baseline. These checks are not additional experimental repeats.
+The actual added mass is 1.00 kg, confirmed by the user in `../IMPLEMENTATION_CLARIFICATIONS.md`. Decay units remain exported mV. A constant baseline is the waveform mean over 0.85 < t < 1.02 s. Each primary damping estimate uses ten cycles between same-side maxima after the initial impact region. The output also records sensitivity to six/eight-cycle endpoints and to a local linear baseline. These checks are not additional experimental repeats.
 
 `inspect_data.py` supplies the parser and optional waveform diagnostics. `inspect_decay.py` prints extrema and baseline candidates used during interval selection. `report_header.tex` contains PDF layout settings; it contains no report prose.

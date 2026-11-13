@@ -2,6 +2,8 @@
 
 Model: gpt-6.1-sol. Reasoning: high. Identical marking prompt supplied to all three reviewers.
 
+Mass clarification, 13 November 2026: the user confirmed the actual added mass as 1.00 kg. Mass-related comments below have been corrected to reflect this; the original marks are retained and have not been reassessed.
+
 **Overall mark: 18.6/20, equivalent to 93/100.** This is an excellent second-year report against the published criteria. It covers all required experiments, presents correct calculations, and treats the limitations honestly. The main weaknesses concern the reliability of the damping estimates and the depth of physical interpretation.
 
 I read the complete [submitted PDF](</C:/Users/thamm/OneDrive/Documents/Dynamics Lab Report/output/pdf/ME31001_lab_report_VER2.pdf>) and [published rubric](</C:/Users/thamm/OneDrive/Documents/Dynamics Lab Report/Assignment_criteria.pdf>), and visually inspected all 13 submission pages, including figures, captions and tables. All page references below count from the first PDF page. These match the submission’s printed page numbers.
@@ -19,7 +21,7 @@ I read the complete [submitted PDF](</C:/Users/thamm/OneDrive/Documents/Dynamics
 The strongest aspects are:
 
 - **Complete coverage with traceable calculations.** The report connects the theory on pages 1–3 to worked beam calculations on pages 8–9 and damping calculations on pages 9–10.
-- **Careful handling of measurement limits.** Page 5 describes agreement within frequency-bin spacing. Pages 4, 8–9 and 12–13 explicitly distinguish the assumed added mass and unavailable amplitude calibration from measured quantities.
+- **Careful handling of measurement limits.** Page 5 describes agreement within frequency-bin spacing. Pages 4, 8–9 and 12–13 identify the unavailable amplitude calibration. The actual added mass is now confirmed as 1.00 kg.
 - **Useful visual evidence.** Figure 3 on page 5 makes frequency comparisons straightforward. Figure 7 on page 9 identifies the selected peaks and equilibrium baselines. Its caption correctly explains the shifted time origins.
 - **A conclusion consistent with the evidence.** Page 13 reports the main results without claiming that the available tests proved a reduction in absolute forced-response amplitude.
 
@@ -29,7 +31,7 @@ The most material weaknesses, ranked by their probable effect on the published m
 
 2. **The oil-damper frequency change is described more fully than it is explained, pages 11–13.** The report correctly says that frequency shifts alone do not measure damping. It should go further and consider whether the attachment changed effective mass, stiffness or support conditions, alongside spectral resolution and test variability. This chiefly affects Discussion.
 
-3. **The theoretical added-mass comparison remains conditional, pages 4, 8–9 and 12.** The assumed 1.00 kg mass produces a sensible calculation, but close agreement cannot validate that assumed mass. The report largely recognises this. A stronger analysis would show how predictions change with added mass, or label any mass inferred from the measured frequency ratio explicitly as a model-based estimate. Measuring the mass would resolve the limitation in a future experiment.
+3. **Resolved: added mass confirmed as 1.00 kg, pages 4, 8–9 and 12.** The theoretical comparison now uses the actual mass. The 31.56 Hz prediction and 5.21% difference from measurement are unchanged.
 
 4. **Some procedural details remain uncertain, pages 3–4.** State the hammer impact position, the number of averaged impacts if known, and whether second-order integration was actually selected. If these details were not recorded, say so. This would make the method easier to reproduce.
 
@@ -56,5 +58,5 @@ I used the [lab sheet](</C:/Users/thamm/OneDrive/Documents/Dynamics Lab Report/L
 - Summarise the three bare damping values as a mean and spread. Their sample standard deviation is approximately **0.00174**, which would give the reader useful context.
 - The exact decrement relation would change the oil estimate only from about **0.02882 to 0.02881**. Its omission warrants no meaningful deduction because the published method explicitly permits the small-damping approximation.
 
-The rubric supplies section weights and required content, but no detailed performance descriptors or internal submark allocations. Consequently, the precise decimal mark involves lecturer judgement; approximately **18–19/20** would be a reasonable moderation range. I have applied no extra requirements for a cover page, abstract, appendix, formal uncertainty budget or higher-mode theoretical calculations. The disclosed missing mass and calibration information are limitations of what the report can establish, not evidence of fabricated results.
+The rubric supplies section weights and required content, but no detailed performance descriptors or internal submark allocations. Consequently, the precise decimal mark involves lecturer judgement; approximately **18–19/20** would be a reasonable moderation range. I have applied no extra requirements for a cover page, abstract, appendix, formal uncertainty budget or higher-mode theoretical calculations. The mass value is now confirmed. The missing calibration information remains a limitation of what the report can establish, not evidence of fabricated results.
 

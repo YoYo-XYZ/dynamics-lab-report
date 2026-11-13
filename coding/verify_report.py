@@ -55,7 +55,8 @@ def main():
         np.testing.assert_allclose(approximate,d['zeta_approx'],rtol=1e-12)
         assert f"{approximate:.5f}" in report
     assert result['file_mapping']['oil_sweep'][0]=='Experiment 3 step 2'
-    assert '1.00 kg' in report and 'assumed' in report
+    assert '1.00 kg' in report and result['theory']['added_mass_kg'] == 1.0
+    assert not re.search(r'assumed.{0,15}(?:added mass|1\.00 kg)|unknown added mass', report)
     assert 'PDF p. 28' in report and 'PDF p. 34' in report
 
     pdf=ROOT/args.pdf

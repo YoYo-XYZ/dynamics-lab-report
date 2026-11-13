@@ -7,7 +7,7 @@ Write the complete report in `REPORT_VER1.md` and generate the submission PDF fr
 ## Resolved experimental details
 
 - Added mass was fitted only for Experiment 1, Step 3, then removed for Experiments 2 and 3. The user's earlier statement that it was fitted in Experiment 3 was a typo, subsequently corrected.
-- The actual added mass is unknown. The user explicitly instructed us to assume **1.00 kg**. Label this as an assumption wherever needed; theoretical predictions using it are conditional, not predictions based on a measured mass. The setup photo shows the attachment but has no readable mass value.
+- The user confirmed on 13 November 2026 that the actual added mass was **1.00 kg**. Use this as the actual value in the report and calculations. The confirmation supersedes the earlier instruction to assume this value; the setup photo itself has no readable mass value.
 - Experiment 2 records are repeated bare-beam decay tests. Experiment 3 decay records are repeats with the same oil-damper configuration. No settings/configuration changes between repeats were reported.
 - No separate settings or frequency notes are available. Use visible screenshot settings and distinguish them from settings prescribed by the lab sheet. Do not ask again for unavailable notes.
 

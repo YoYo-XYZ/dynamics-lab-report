@@ -117,7 +117,7 @@ Table 1. Prescribed settings and settings visible in the saved records.
 
 For Experiment 1, the beam was excited using the shaker and its response spectrum was saved with Peakhold. This retained the peak response across the sweep, allowing the first three modal regions to be identified. The shaker was then switched off for hammer excitation. Repeated impacts were acquired using Linear Average and the response spectrum was saved [1, p. 3]. Although the hammer contained a force transducer, the saved single-channel records contained response data. They did not establish a measured force-to-response transfer function.
 
-A mass was attached at the centre for Experiment 1, Step 3, and the swept-sine test was repeated [1, p. 4]. The actual mass was not recorded. A value of **1.00 kg was assumed** for the theoretical comparison. This was not a measured value. The mass was removed before Experiments 2 and 3.
+A 1.00 kg mass was attached at the centre for Experiment 1, Step 3, and the swept-sine test was repeated [1, p. 4]. The mass was removed before Experiments 2 and 3.
 
 ### 3.3 Decay and oil-damper tests
 
@@ -159,7 +159,7 @@ Figure 1 combines the four saved spectra in separate panels. Each spectrum is di
 
 The first added-mass peak was selected in the 25-45 Hz region and the second in the 145-180 Hz region. The largest peak in the whole spectrum was not assumed to be the first mode. Table 3 shows the changes relative to the bare sweep.
 
-Table 3. Frequency changes with the centre attachment; its mass is assumed to be 1.00 kg for modelling [3].
+Table 3. Frequency changes with the 1.00 kg centre attachment [3].
 
 | Mode | Bare sweep, Hz | Added-mass sweep, Hz | Change, Hz | Change, % |
 |:--|--:|--:|--:|--:|
@@ -200,7 +200,7 @@ f_{n,0}=\frac{1}{2\pi}\sqrt{\frac{78303}{0.99134}}
  =44.73\ \mathrm{Hz}.
 $$
 
-With the **assumed** added mass $m'=1.00$ kg,
+With the added mass $m'=1.00$ kg,
 
 $$
 f_{n,\mathrm{added}}=\frac{1}{2\pi}\sqrt{\frac{78303}{0.99134+1.00}}
@@ -214,9 +214,9 @@ Table 4. First-mode model predictions and measured response peaks.
 | Condition | Model $f_n$, Hz | Sweep peak, Hz | Absolute difference, Hz | Difference, % |
 |:--|--:|--:|--:|--:|
 | Bare beam | 44.73 | 46.88 | 2.15 | 4.80 |
-| Added mass, assumed 1.00 kg | 31.56 | 33.20 | 1.64 | 5.21 |
+| Added mass, 1.00 kg | 31.56 | 33.20 | 1.64 | 5.21 |
 
-The conditional model reduction was 29.44%, compared with the measured 29.17%. This agreement does not verify the assumed mass.
+The model reduction was 29.44%, compared with the measured 29.17%.
 
 ### 4.4 Free-decay damping estimates
 
@@ -287,7 +287,7 @@ The oil-damper first free-decay frequency, 44.94 Hz, was close to its forced-res
 
 ### 5.1 Added mass and the beam model
 
-The centre attachment lowered the first measured peak by 29.17%, but the second by only 5.75%. Equation 7 explains the first change through increased moving mass. The conditional prediction for a 1.00 kg mass gave a similar percentage reduction. However, both theoretical frequencies were about 5% below the measured peaks, and the actual added mass was unknown. The comparison supports the trend more strongly than the absolute prediction.
+The centre attachment lowered the first measured peak by 29.17%, but the second by only 5.75%. Equation 7 explains the first change through increased moving mass. The prediction for the 1.00 kg mass gave a similar percentage reduction. However, both theoretical frequencies were about 5% below the measured peaks. The comparison supports the trend more strongly than the absolute prediction.
 
 The ideal first-mode centre motion makes the centre mass effective, while the ideal second-mode centre node explains its smaller influence [4, section 10.4.1]. The second measured peak still shifted by about ten bins. Possible reasons include the attachment's finite size, imperfect centring and departures from ideal supports. These were not measured separately, so none can be identified as the sole cause. The first-mode lumped model cannot predict that second-mode shift.
 
@@ -311,7 +311,7 @@ Under equal harmonic force and unchanged mass and stiffness, Equation 3 predicts
 
 ## 6. Conclusion
 
-The bare-beam sweep and hammer tests identified the same three response peaks at 46.88, 169.92 and 368.16 Hz, within a spectrum spacing of 0.98 Hz. Adding the centre attachment lowered the first two peaks to 33.20 and 160.16 Hz. The first reduction was 29.17%, larger than the second reduction of 5.75%. The first-mode model predicted 44.73 Hz for the bare beam and 31.56 Hz with an assumed 1.00 kg mass; the added-mass prediction remains conditional on that assumption.
+The bare-beam sweep and hammer tests identified the same three response peaks at 46.88, 169.92 and 368.16 Hz, within a spectrum spacing of 0.98 Hz. Adding the centre attachment lowered the first two peaks to 33.20 and 160.16 Hz. The first reduction was 29.17%, larger than the second reduction of 5.75%. The first-mode model predicted 44.73 Hz for the bare beam and 31.56 Hz with the 1.00 kg mass.
 
 Free-decay analysis gave a bare-beam mean damping ratio of 0.01324 across three records and an oil-damper estimate of 0.02881 from one numerical record. The oil damper therefore increased the measured decay rate. Its forced-response peaks were 44.92 and 170.90 Hz. Unknown input force and unverified amplitude calibration prevented a quantitative comparison of absolute peak heights. Baseline drift, modal ripple and the missing oil-damper repeat also limit the damping precision, although the increase remained clear in the sensitivity checks.
 
@@ -321,7 +321,7 @@ Free-decay analysis gave a bare-beam mean damping ratio of 0.01324 across three 
 
 [2] The Hong Kong Polytechnic University. *ME31001 Dynamics and Vibrations lecture slides*. Supplied file, `theory_lecture_slides.pdf`. Natural frequency, PDF p. 9; damped free vibration, PDF pp. 24-28; forced vibration, PDF pp. 31-34. All page references in this report are PDF page numbers, rather than printed slide numbers.
 
-[3] Laboratory group. *Beam vibration experimental records*. Supplied TXT exports and DASP screenshots in `Lab_results/`. File mapping is given in Appendix A. Configuration details and the instructed 1.00 kg mass assumption are recorded in `IMPLEMENTATION_CLARIFICATIONS.md`.
+[3] Laboratory group. *Beam vibration experimental records*. Supplied TXT exports and DASP screenshots in `Lab_results/`. File mapping is given in Appendix A. Configuration details and the subsequent confirmation of the 1.00 kg added mass are recorded in `IMPLEMENTATION_CLARIFICATIONS.md`.
 
 [4] Bower, A. F. *Applied mechanics of solids*, section 10.4.1, "Free vibration of a straight beam without axial force," subsection "Beam with pinned ends." Available at [solidmechanics.org](https://solidmechanics.org/Text/Chapter10_4/Chapter10_4.html). Accessed 13 November 2026. Used for the ideal beam mode shapes.
 

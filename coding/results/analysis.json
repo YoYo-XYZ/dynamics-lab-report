@@ -230,10 +230,10 @@
     "k_N_per_m": 78303.14064633593,
     "beam_mass_kg": 2.041,
     "equivalent_mass_kg": 0.9913428571428571,
-    "assumed_added_mass_kg": 1.0,
+    "added_mass_kg": 1.0,
     "bare_fn_Hz": 44.72988498808,
     "added_fn_Hz": 31.559978745646482,
-    "conditional_change_percent": -29.44319272437912,
+    "predicted_change_percent": -29.44319272437912,
     "bare_error_percent": 4.795708758230982,
     "added_error_percent": 5.206423830624981
   },

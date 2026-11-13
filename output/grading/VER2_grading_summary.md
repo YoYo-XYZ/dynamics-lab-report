@@ -1,5 +1,7 @@
 # VER2 grading summary
 
+Mass clarification, 13 November 2026: the user confirmed the actual added mass as 1.00 kg. The mass-related limitation is resolved and the report sources and PDFs have been updated. The original independent marks and their average below are retained; no reassessment has been performed.
+
 Final grading estimate: **18.0/20, or 90%**, excellent second-year work against the published criteria. This is the three-marker mean rounded to a sensible reporting precision, not an official lecturer mark. The exact mean is 17.9667/20, or 89.83%. The independent marks range from 16.8 to 18.6/20, or 84% to 93%. This range describes marker judgement, not a statistical confidence interval.
 
 All three agents received the same prompt and worked independently with high reasoning: gpt-6-luna, gpt-6.1-terra and gpt-6.1-sol. Each assessed the submitted PDF using the six published sections. The parent agent inspected all 13 rendered report pages and the rubric, checked the disputed text and key calculations, and compared the assessments. PDF page numbers match the report's printed page numbers.
@@ -32,7 +34,7 @@ Full independent assessments, including each criterion's justification and page 
 
 **Procedure, pp. 3–4.** The required tests, major instrument settings and precautions are described. Sol identifies the clearest remaining weaknesses: impact location, averaging count and confirmation that second-order integration was actually used. The report says the lab procedure specified integration, which is less definite than reporting the actual setting. Its honest disclosure of 2048 rather than 2000 samples does not itself demonstrate an invalid experiment.
 
-**Results, pp. 5–11.** Every required table and calculation type is present. All markers find the numerical work materially correct. The first-mode prediction using an assumed mass is conditional, and the damping estimates lack a demonstrated reliability range. Those limitations constrain confidence despite correct arithmetic. Separately normalised spectra are properly labelled and support frequency comparisons, not absolute amplitude comparisons.
+**Results, pp. 5–11.** Every required table and calculation type is present. All markers find the numerical work materially correct. The first-mode prediction now uses the confirmed 1.00 kg mass. The damping estimates still lack a demonstrated reliability range, which constrains confidence despite correct arithmetic. Separately normalised spectra are properly labelled and support frequency comparisons, not absolute amplitude comparisons.
 
 **Discussion, pp. 12–13.** This is the strongest marking agreement: 2.5–2.6/3. The report explains the main trends and avoids overstating the peak-height evidence. It could make better use of its equations to assess the oil-damper frequency shift, relate the second-mode mass effect to mode shape, and quantify the effect of measurement choices.
 
@@ -54,7 +56,7 @@ Formal uncertainty propagation is also not explicitly required. However, checkin
 
 2. **Explain the oil-damper frequency shift, pp. 11–13.** From the report's displacement magnification equation, the resonance ratio is sqrt(1 - 2*zeta^2). Holding the underlying natural frequency fixed, changing zeta from 0.01324 to 0.02882 predicts a shift of roughly 0.03 Hz near 46.88 Hz, far below the measured 1.95 Hz. The parent recalculation confirms this scale. Discuss possible changes in effective mass, stiffness, attachment/support conditions and measurement variability. The report does not falsely attribute the whole shift to damping, but leaves the explanation incomplete.
 
-3. **Strengthen the conditional mass comparison, pp. 4, 8–9 and 12.** Recover or measure the actual added mass if possible. Otherwise describe the 1.00 kg result as a conditional illustration and show how the prediction depends on assumed mass. Close numerical agreement cannot independently validate an unmeasured input. Do not replace the unknown mass with an inferred estimate without labelling the inference.
+3. **Resolved: added mass confirmed as 1.00 kg, pp. 4, 8–9 and 12.** The theoretical comparison now uses the actual mass. The 31.56 Hz prediction, 29.44% predicted reduction and 5.21% difference from measurement are unchanged. No mass inference or additional mass-sensitivity analysis is needed to resolve this issue.
 
 4. **Improve reproducibility, pp. 3–4.** State the impact position, averaging count and actual integration setting if they can be verified. If they were not recorded, acknowledge that directly.
 
@@ -80,5 +82,5 @@ The rubric supplies section weights and content requirements, without detailed p
 - [Experimental records](../../Lab_results)
 - [Lecture source](../../theory_lecture_slides.pdf), PDF p. 34, for the displacement magnification relation used in the frequency-shift check.
 
-The report and its Markdown source were not edited.
+Both report versions and their PDFs were subsequently updated only to reflect the confirmed 1.00 kg mass. The other improvement recommendations remain outstanding.
 

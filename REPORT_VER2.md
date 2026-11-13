@@ -120,7 +120,7 @@ The controller photograph in Figure 2 shows the sweep range, time and current se
 
 ![Figure 2. Controller settings photographed during the lab: 10-400 Hz sweep, 60 s sweep time and 0.500 A RMS current. Cropped from experiment_shaker_config.png, with labels added [3].](figures/lab/shaker_settings.png)
 
-The shaker was switched off before hammer testing. Repeated impacts were recorded using Linear Average to obtain a stable spectrum. A mass was then attached at the beam centre and the sweep was repeated for the first two frequencies [1, pp. 3-4]. The actual added mass was not recorded, so 1.00 kg was assumed for the theoretical calculation. It was removed before the decay and oil-damper tests.
+The shaker was switched off before hammer testing. Repeated impacts were recorded using Linear Average to obtain a stable spectrum. A 1.00 kg mass was then attached at the beam centre and the sweep was repeated for the first two frequencies [1, pp. 3-4]. It was removed before the decay and oil-damper tests.
 
 ### 3.3 Free decay and oil-damper tests
 
@@ -199,7 +199,7 @@ f_{\mathrm{bare}}=\frac{1}{2\pi}\sqrt{\frac{78303}{0.99134}}
 =44.73\ \mathrm{Hz}.
 $$
 
-Using the assumed added mass of 1.00 kg gives
+Using the added mass of 1.00 kg gives
 
 $$
 f_{\mathrm{added}}=\frac{1}{2\pi}\sqrt{\frac{78303}{0.99134+1.00}}
@@ -220,7 +220,7 @@ Table 3. Theoretical and measured first frequencies.
 | Condition | Theory, Hz | Measured, Hz | Difference, % |
 |:--|--:|--:|--:|
 | Bare beam | 44.73 | 46.88 | 4.80 |
-| Added mass, assumed 1.00 kg | 31.56 | 33.20 | 5.21 |
+| Added mass, 1.00 kg | 31.56 | 33.20 | 5.21 |
 
 ### 4.4 Free decay and damping ratio
 
@@ -292,11 +292,11 @@ $$
 =\sqrt{\frac{m}{m+m'}}<1,\qquad m'>0.
 $$
 
-The first measured frequency fell from 46.88 to 33.20 Hz, a 29.17% reduction. The model predicted a 29.44% reduction for the assumed 1.00 kg mass, so the measured trend agrees with the mass-spring relationship.
+The first measured frequency fell from 46.88 to 33.20 Hz, a 29.17% reduction. The model predicted a 29.44% reduction for the 1.00 kg mass, so the measured trend agrees with the mass-spring relationship.
 
 The second frequency fell by only 5.75%. The two modes were therefore affected by different amounts. Equation 8 represents the first mode only and cannot predict the second-mode change.
 
-Both measured first frequencies were about 5% above the predictions. The real supports may differ from the ideal simple supports assumed by the model. The unknown added mass also limits the second prediction. Measuring that mass and checking the support conditions would make the comparison more reliable.
+Both measured first frequencies were about 5% above the predictions. The real supports may differ from the ideal simple supports assumed by the model. Checking the support conditions would make the comparison more reliable.
 
 ### 5.2 Swept-sine and hammer tests
 
@@ -332,7 +332,7 @@ The decay records contain some ripple and baseline drift, which affect the peak 
 
 Swept-sine and hammer tests gave the same bare-beam frequencies of 46.88, 169.92 and 368.16 Hz within the 0.98 Hz spectrum spacing.
 
-The centre mass reduced the first two frequencies to 33.20 and 160.16 Hz. The first-mode reduction of 29.17% agreed with the mass-spring relationship. The theoretical first frequencies were 44.73 Hz bare and 31.56 Hz with the assumed 1.00 kg mass, both about 5% below measurement.
+The centre mass reduced the first two frequencies to 33.20 and 160.16 Hz. The first-mode reduction of 29.17% agreed with the mass-spring relationship. The theoretical first frequencies were 44.73 Hz bare and 31.56 Hz with the 1.00 kg mass, both about 5% below measurement.
 
 Logarithmic decrement gave a mean bare damping ratio of 0.01324 and an oil-damper value of 0.02882. The oil damper produced faster free decay, consistent with the lecture response equation. Its forced-response peaks were 44.92 and 170.90 Hz. The peak-height effect could not be confirmed from the available measurements, and more oil-damper decay records would improve the damping comparison.
 

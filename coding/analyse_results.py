@@ -148,7 +148,7 @@ def main():
     frequency = {key:[peak_in_band(records[key],lo,hi) for lo,hi in ranges]
                  for key,ranges in bands.items()}
     damping = {key:decay(records[key],start) for key,start in DECAY_STARTS.items()}
-    L,b,h,E,rho,added = .650,.050,.008,210e9,7850.,1.00
+    L,b,h,E,rho,added = .650,.050,.008,210e9,7850.,1.00  # Actual added mass confirmed by the user.
     inertia=b*h**3/12
     stiffness=48*E*inertia/L**3
     total=rho*L*b*h
@@ -156,8 +156,8 @@ def main():
     f0=np.sqrt(stiffness/equivalent)/(2*np.pi)
     f1=np.sqrt(stiffness/(equivalent+added))/(2*np.pi)
     theory={'I_m4':inertia,'k_N_per_m':stiffness,'beam_mass_kg':total,
-            'equivalent_mass_kg':equivalent,'assumed_added_mass_kg':added,
-            'bare_fn_Hz':f0,'added_fn_Hz':f1,'conditional_change_percent':100*(f1/f0-1)}
+            'equivalent_mass_kg':equivalent,'added_mass_kg':added,
+            'bare_fn_Hz':f0,'added_fn_Hz':f1,'predicted_change_percent':100*(f1/f0-1)}
     comparisons={}
     for key in ['mass_sweep','oil_sweep']:
         comparisons[key]=[{'change_Hz':r['frequency_Hz']-frequency['bare_sweep'][j]['frequency_Hz'],
