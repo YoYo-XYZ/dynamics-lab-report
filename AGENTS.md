@@ -16,3 +16,4 @@ This workspace contains the ME31001 Dynamics and Vibrations lab report.
 ## Conventions
 - Keep the reports edits in the main Markdown file. Treat the supplied lecture slides PDFs theory_lecture_slides.pdf as reference knowledge material
 - Support factual claims with identifiable sources. For lecture references, include the exact page number. Keep in-text citations consistent with the reference list.
+- Place all code and scripts used for the report in the `coding/` folder.
