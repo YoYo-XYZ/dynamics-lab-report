@@ -1,0 +1,13 @@
+% Layout settings only. Report text remains in REPORT_VER1.md.
+\usepackage{float}
+\floatplacement{figure}{H}
+\usepackage{caption}
+\usepackage{needspace}
+\captionsetup{labelformat=empty,font=small,skip=6pt}
+\setlength{\emergencystretch}{3em}
+\setlength{\tabcolsep}{4pt}
+\AtBeginEnvironment{longtable}{\small}
+\AtBeginEnvironment{tabular}{\small}
+\setcounter{secnumdepth}{0}
+\widowpenalty=10000
+\clubpenalty=10000

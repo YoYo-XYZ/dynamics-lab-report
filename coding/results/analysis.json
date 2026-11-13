@@ -1,0 +1,267 @@
+{
+  "file_mapping": {
+    "bare_sweep": [
+      "Experiment 1 step 1",
+      "bare beam, swept sine, Peakhold"
+    ],
+    "bare_hammer": [
+      "Experiment 1 step 2",
+      "bare beam, hammer, Linear Average"
+    ],
+    "mass_sweep": [
+      "Experiment 1 step 3",
+      "added centre mass, swept sine, Peakhold"
+    ],
+    "bare_decay_1": [
+      "Experiment 2 step 1",
+      "bare beam, decay repeat 1"
+    ],
+    "bare_decay_2": [
+      "Experiment 2 step 2",
+      "bare beam, decay repeat 2"
+    ],
+    "bare_decay_3": [
+      "Experiment 2 step 3",
+      "bare beam, decay repeat 3"
+    ],
+    "oil_decay": [
+      "Experiment 3 step 1",
+      "oil damper, decay, one numeric export"
+    ],
+    "oil_sweep": [
+      "Experiment 3 step 2",
+      "oil damper, swept sine; matches step 3 PNG"
+    ]
+  },
+  "frequency": {
+    "bare_sweep": [
+      {
+        "frequency_Hz": 46.875,
+        "SpecPeak_mV": 103.727698
+      },
+      {
+        "frequency_Hz": 169.921875,
+        "SpecPeak_mV": 787.69455
+      },
+      {
+        "frequency_Hz": 368.164063,
+        "SpecPeak_mV": 886.953112
+      }
+    ],
+    "bare_hammer": [
+      {
+        "frequency_Hz": 46.875,
+        "SpecPeak_mV": 11.571448
+      },
+      {
+        "frequency_Hz": 169.921875,
+        "SpecPeak_mV": 21.856509
+      },
+      {
+        "frequency_Hz": 368.164063,
+        "SpecPeak_mV": 4.07951
+      }
+    ],
+    "mass_sweep": [
+      {
+        "frequency_Hz": 33.203125,
+        "SpecPeak_mV": 69.104542
+      },
+      {
+        "frequency_Hz": 160.15625,
+        "SpecPeak_mV": 411.559139
+      }
+    ],
+    "oil_sweep": [
+      {
+        "frequency_Hz": 44.921875,
+        "SpecPeak_mV": 124.778231
+      },
+      {
+        "frequency_Hz": 170.898438,
+        "SpecPeak_mV": 913.138816
+      }
+    ]
+  },
+  "damping": {
+    "bare_decay_1": {
+      "baseline_mV": -0.00026123598820058995,
+      "t1_s": 0.0615,
+      "t11_s": 0.2745,
+      "y1_mV": 0.000584,
+      "y11_mV": 6.4e-05,
+      "a1_mV": 0.0008452359882005899,
+      "a11_mV": 0.00032523598820058993,
+      "n_cycles": 10,
+      "delta": 0.09550648279697088,
+      "zeta": 0.015198573120733026,
+      "zeta_approx": 0.015200328834458982,
+      "fd_Hz": 46.94835680751173,
+      "peak_indices": [
+        123,
+        168,
+        207,
+        252,
+        297,
+        336,
+        381,
+        425,
+        464,
+        509,
+        549
+      ],
+      "zeta_6_8_10_cycles": [
+        0.012872799777411957,
+        0.013712415442069177,
+        0.015198573120733026
+      ],
+      "local_baseline_zeta": 0.01507923402472567,
+      "local_baseline_slope_mV_per_s": -3.6096104044357076e-06,
+      "local_baseline_intercept_mV": -0.0002637574835487606
+    },
+    "bare_decay_2": {
+      "baseline_mV": -0.0003362684365781711,
+      "t1_s": 0.5275,
+      "t11_s": 0.7405,
+      "y1_mV": 0.001163,
+      "y11_mV": 0.000341,
+      "a1_mV": 0.001499268436578171,
+      "a11_mV": 0.0006772684365781712,
+      "n_cycles": 10,
+      "delta": 0.07946648558722638,
+      "zeta": 0.012646472574179548,
+      "zeta_approx": 0.012647483991347937,
+      "fd_Hz": 46.94835680751172,
+      "peak_indices": [
+        1055,
+        1095,
+        1138,
+        1182,
+        1225,
+        1268,
+        1311,
+        1354,
+        1397,
+        1440,
+        1481
+      ],
+      "zeta_6_8_10_cycles": [
+        0.0119553999306045,
+        0.012438772942782797,
+        0.012646472574179548
+      ],
+      "local_baseline_zeta": 0.012955634835320043,
+      "local_baseline_slope_mV_per_s": 0.00016570569287221217,
+      "local_baseline_intercept_mV": -0.00046365054451349643
+    },
+    "bare_decay_3": {
+      "baseline_mV": -0.0002589587020648968,
+      "t1_s": 0.063,
+      "t11_s": 0.277,
+      "y1_mV": 0.00103,
+      "y11_mV": 0.000352,
+      "a1_mV": 0.0012889587020648969,
+      "a11_mV": 0.0006109587020648968,
+      "n_cycles": 10,
+      "delta": 0.07465605975277673,
+      "zeta": 0.01188104229361957,
+      "zeta_approx": 0.011881880941418317,
+      "fd_Hz": 46.72897196261682,
+      "peak_indices": [
+        126,
+        168,
+        212,
+        255,
+        297,
+        341,
+        384,
+        425,
+        469,
+        511,
+        554
+      ],
+      "zeta_6_8_10_cycles": [
+        0.013700699848936536,
+        0.012288569958309587,
+        0.01188104229361957
+      ],
+      "local_baseline_zeta": 0.011880411066113847,
+      "local_baseline_slope_mV_per_s": 6.337842059715494e-05,
+      "local_baseline_intercept_mV": -0.0002887833865382268
+    },
+    "oil_decay": {
+      "baseline_mV": -0.0004419970501474926,
+      "t1_s": 0.36,
+      "t11_s": 0.5825,
+      "y1_mV": 0.000628,
+      "y11_mV": -0.000267,
+      "a1_mV": 0.0010699970501474925,
+      "a11_mV": 0.00017499705014749264,
+      "n_cycles": 10,
+      "delta": 0.18106420530992465,
+      "zeta": 0.02880530531213135,
+      "zeta_approx": 0.02881726329208031,
+      "fd_Hz": 44.9438202247191,
+      "peak_indices": [
+        720,
+        758,
+        804,
+        850,
+        897,
+        943,
+        980,
+        1027,
+        1073,
+        1119,
+        1165
+      ],
+      "zeta_6_8_10_cycles": [
+        0.02895662511667407,
+        0.024831911708554765,
+        0.02880530531213135
+      ],
+      "local_baseline_zeta": 0.026814833710532057,
+      "local_baseline_slope_mV_per_s": 0.0002905380157488561,
+      "local_baseline_intercept_mV": -0.0006545985392000131
+    }
+  },
+  "theory": {
+    "I_m4": 2.133333333333334e-09,
+    "k_N_per_m": 78303.14064633593,
+    "beam_mass_kg": 2.041,
+    "equivalent_mass_kg": 0.9913428571428571,
+    "assumed_added_mass_kg": 1.0,
+    "bare_fn_Hz": 44.72988498808,
+    "added_fn_Hz": 31.559978745646482,
+    "conditional_change_percent": -29.44319272437912,
+    "bare_error_percent": 4.795708758230982,
+    "added_error_percent": 5.206423830624981
+  },
+  "comparisons": {
+    "mass_sweep": [
+      {
+        "change_Hz": -13.671875,
+        "change_percent": -29.166666666666664
+      },
+      {
+        "change_Hz": -9.765625,
+        "change_percent": -5.747126436781613
+      }
+    ],
+    "oil_sweep": [
+      {
+        "change_Hz": -1.953125,
+        "change_percent": -4.1666666666666625
+      },
+      {
+        "change_Hz": 0.9765629999999987,
+        "change_percent": 0.5747129379310323
+      }
+    ]
+  },
+  "summary": {
+    "bare_zeta_mean": 0.013242029329510714,
+    "bare_zeta_sample_sd": 0.0017371006257057948,
+    "oil_to_bare_mean_ratio": 2.17529387644059
+  }
+}

@@ -1,0 +1,7 @@
+__pycache__/
+coding/qa/
+coding/*_diagnostics.png
+coding/lab-model.png
+*.aux
+*.log
+*.out

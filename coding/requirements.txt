@@ -1,0 +1,6 @@
+numpy
+scipy
+matplotlib
+pillow
+pypandoc_binary==1.17
+pypdf
