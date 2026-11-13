@@ -57,7 +57,10 @@ def main():
     assert result['file_mapping']['oil_sweep'][0]=='Experiment 3 step 2'
     assert '1.00 kg' in report and result['theory']['added_mass_kg'] == 1.0
     assert not re.search(r'assumed.{0,15}(?:added mass|1\.00 kg)|unknown added mass', report)
-    assert 'PDF p. 28' in report and 'PDF p. 34' in report
+    if (ROOT/args.source).name != 'REPORT_FINAL.md':
+        assert 'PDF p. 28' in report and 'PDF p. 34' in report
+    else:
+        assert not re.search(r'\[[123][^\]]*\bpp?\.', report)
 
     pdf=ROOT/args.pdf
     reader=PdfReader(pdf)
