@@ -3,7 +3,8 @@ This workspace contains the ME31001 Dynamics and Vibrations lab report.
 
 - Lab_details.pdf is the source of truth for the lab information and content.
 - Assignment_criteria.pdf is the source of truth for the report guidelines and grading criteria.
-- The ennd goal of this project is to complete an individual lab report for the assignment.
+- Lab_results is the source of truth for the lab's experimental results
+- The end goal of this project is to complete an individual lab report for the assignment.
 
 # Writing Style and Narrative and Tone
 
