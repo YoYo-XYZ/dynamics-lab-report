@@ -1,9 +1,9 @@
 # Project Guidelines
-This workspace contains ME31001 Dynamics and Vibrations Lab Report
+This workspace contains the ME31001 Dynamics and Vibrations lab report.
 
-- The source of truth regarding the content, info of the lab is in Lab_details.pdf
-- The source of truth regarding the guideline for lab report and grading criteria is in Assignment_criteria.pdf
-- The end goal of this project is to complete an Individual Lab Report for the assignment
+- Lab_details.pdf is the source of truth for the lab information and content.
+- Assignment_criteria.pdf is the source of truth for the report guidelines and grading criteria.
+- The ennd goal of this project is to complete an individual lab report for the assignment.
 
 # Writing Style and Narrative and Tone
 
