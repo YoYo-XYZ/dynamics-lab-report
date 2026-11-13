@@ -86,7 +86,7 @@ def build(item):
         anchor_y = y+8 if y < 32 else y-8
         lines.extend([
             rf'\draw[overlay,-{{Stealth[length=5bp]}},draw=blue!65!black,line width=.8bp,'
-            rf'preaction={{draw=white,line width=2.2bp}}]'
+            rf'preaction={{draw=white,line width=1.1bp}}]'
             rf' ({x},{anchor_y}) -- ({px:.3f},{py:.3f});',
             rf'\node[overlay,fill=white,draw=blue!65!black,rounded corners=2bp,'
             rf'inner sep=3bp,font=\sffamily\fontsize{{9}}{{11}}\selectfont]'
